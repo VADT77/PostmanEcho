@@ -1,9 +1,9 @@
 package classes;
-
+import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
+
 
 public class PostmanEchoTest {
     @Test
@@ -16,6 +16,6 @@ public class PostmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("ПостманЭхотест "));
+                .body("data", equalTo("1ПостманЭхотест "));
     }
 }
